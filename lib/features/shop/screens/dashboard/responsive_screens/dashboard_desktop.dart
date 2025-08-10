@@ -5,6 +5,7 @@ import 'package:yt_ecommerce_admin_panel/common/widgets/containers/rounded_conta
 import 'package:yt_ecommerce_admin_panel/features/shop/controllers/dashboard/dashboard_controller.dart';
 import 'package:yt_ecommerce_admin_panel/features/shop/screens/dashboard/table/data_table.dart';
 import 'package:yt_ecommerce_admin_panel/features/shop/screens/dashboard/widgets/dashboard_card.dart';
+import 'package:yt_ecommerce_admin_panel/features/shop/screens/dashboard/widgets/order_status_graph.dart';
 import 'package:yt_ecommerce_admin_panel/features/shop/screens/dashboard/widgets/weekly_sales.dart';
 import 'package:yt_ecommerce_admin_panel/utils/constants/colors.dart';
 import 'package:yt_ecommerce_admin_panel/utils/constants/sizes.dart';
@@ -121,7 +122,7 @@ class DashboardDesktopScreen extends StatelessWidget {
                   const SizedBox(height: TSizes.spaceBtwSections),
 
                   /// Pie Chart
-                  const Expanded(child: TRoundedContainer()),
+                  const Expanded(child: OrderStatusPieChart()),
                 ],
               )
             ],

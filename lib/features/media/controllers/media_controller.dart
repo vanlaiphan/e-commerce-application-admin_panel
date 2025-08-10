@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_dropzone/flutter_dropzone.dart';
 import 'package:get/get.dart';
 import 'package:yt_ecommerce_admin_panel/data/repositories/media/media_repository.dart';
-import 'package:yt_ecommerce_admin_panel/features/shop/models/image_model.dart';
+import 'package:yt_ecommerce_admin_panel/features/media/models/image_model.dart';
 import 'package:yt_ecommerce_admin_panel/utils/constants/enums.dart';
 import 'package:yt_ecommerce_admin_panel/utils/constants/image_strings.dart';
 import 'package:yt_ecommerce_admin_panel/utils/constants/sizes.dart';

@@ -9,7 +9,7 @@ import '../../../media/controllers/media_controller.dart';
 import '../../models/brand_category_model.dart';
 import '../../models/brand_model.dart';
 import '../../models/category_model.dart';
-import '../../models/image_model.dart';
+import '../../../media/models/image_model.dart';
 import 'brand_controller.dart';
 
 class EditBrandController extends GetxController {
@@ -21,7 +21,7 @@ class EditBrandController extends GetxController {
   final name = TextEditingController();
   final formKey = GlobalKey<FormState>();
   final repository = Get.put(BrandRepository());
-  final List<CategoryModel> selectedCategories = <CategoryModel>[].obs;
+  final RxList<CategoryModel> selectedCategories = <CategoryModel>[].obs;
 
   /// Init Data
   void init(BrandModel brand) {
@@ -88,16 +88,16 @@ class EditBrandController extends GetxController {
       bool isBrandUpdated = false;
       if (brand.image != imageURL.value || brand.name != name.text.trim() || brand.isFeatured != isFeatured.value) {
         isBrandUpdated = true;
+
+        // Map Data
+        brand.image = imageURL.value;
+        brand.name = name.text.trim();
+        brand.isFeatured = isFeatured.value;
+        brand.updatedAt = DateTime.now();
+
+        // Call Repository to Update
+        await repository.updateBrand(brand);
       }
-
-      // Map Data
-      brand.image = imageURL.value;
-      brand.name = name.text.trim();
-      brand.isFeatured = isFeatured.value;
-      brand.updatedAt = DateTime.now();
-
-      // Call Repository to Update
-      await repository.updateBrand(brand);
 
       // Update BrandCategories
       if (selectedCategories.isNotEmpty) await updateBrandCategories(brand);

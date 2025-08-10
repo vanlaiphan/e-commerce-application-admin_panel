@@ -13,7 +13,7 @@ import 'package:yt_ecommerce_admin_panel/features/shop/screens/category/all_cate
 import 'package:yt_ecommerce_admin_panel/features/shop/screens/category/create_category/create_category.dart';
 import 'package:yt_ecommerce_admin_panel/features/shop/screens/category/edit_category/edit_category.dart';
 import 'package:yt_ecommerce_admin_panel/features/shop/screens/customer/all_customers/customers.dart';
-import 'package:yt_ecommerce_admin_panel/features/shop/screens/customer/customer_detail/customer.dart';
+import 'package:yt_ecommerce_admin_panel/features/shop/screens/customer/customer_detail/customer_detail.dart';
 import 'package:yt_ecommerce_admin_panel/features/shop/screens/dashboard/dashboard.dart';
 import 'package:yt_ecommerce_admin_panel/features/shop/screens/order/all_orders/orders.dart';
 import 'package:yt_ecommerce_admin_panel/features/shop/screens/order/orders_detail/order_detail.dart';
@@ -62,8 +62,11 @@ class TAppRoute {
     GetPage(name: TRoutes.orders, page: () =>  const OrdersScreen(),middlewares: [TRouteMiddleware()]),
     GetPage(name: TRoutes.orderDetails, page: () =>  const OrderDetailScreen(),middlewares: [TRouteMiddleware()]),
 
-    //
+    // Personalization
     GetPage(name: TRoutes.settings, page: () =>  const SettingsScreen(),middlewares: [TRouteMiddleware()]),
     GetPage(name: TRoutes.profile, page: () =>  const ProfileScreen(),middlewares: [TRouteMiddleware()]),
+
+    // Logout
+    GetPage(name: '/logout', page: () => const LoginScreen(), middlewares: [TRouteMiddleware()]),
   ];
 }

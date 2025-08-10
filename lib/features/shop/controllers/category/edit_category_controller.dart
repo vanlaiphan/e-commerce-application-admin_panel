@@ -8,7 +8,7 @@ import '../../../../utils/helpers/network_manager.dart';
 import '../../../../utils/popups/full_screen_loader.dart';
 import '../../../../utils/popups/loaders.dart';
 import '../../../media/controllers/media_controller.dart';
-import '../../models/image_model.dart';
+import '../../../media/models/image_model.dart';
 
 class EditCategoryController extends GetxController {
   static EditCategoryController get instance => Get.find();
@@ -63,7 +63,7 @@ class EditCategoryController extends GetxController {
       CategoryController.instance.updateItemFromLists(category);
 
       // Reset Form
-      resetFields();
+      // resetFields();
 
       // Remove Loader
       TFullScreenLoader.stopLoading();

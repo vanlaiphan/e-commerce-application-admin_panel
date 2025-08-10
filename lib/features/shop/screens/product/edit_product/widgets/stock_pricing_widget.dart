@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:get/get.dart';
-import 'package:yt_ecommerce_admin_panel/features/shop/controllers/product/create_product_controller.dart';
 import 'package:yt_ecommerce_admin_panel/features/shop/controllers/product/edit_product_controller.dart';
 import 'package:yt_ecommerce_admin_panel/utils/constants/enums.dart';
 

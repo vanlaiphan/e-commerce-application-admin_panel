@@ -4,7 +4,7 @@ import 'package:yt_ecommerce_admin_panel/data/repositories/category/category_rep
 import 'package:yt_ecommerce_admin_panel/features/media/controllers/media_controller.dart';
 import 'package:yt_ecommerce_admin_panel/features/shop/controllers/category/category_controller.dart';
 import 'package:yt_ecommerce_admin_panel/features/shop/models/category_model.dart';
-import 'package:yt_ecommerce_admin_panel/features/shop/models/image_model.dart';
+import 'package:yt_ecommerce_admin_panel/features/media/models/image_model.dart';
 import 'package:yt_ecommerce_admin_panel/utils/helpers/network_manager.dart';
 import 'package:yt_ecommerce_admin_panel/utils/popups/full_screen_loader.dart';
 import 'package:yt_ecommerce_admin_panel/utils/popups/loaders.dart';

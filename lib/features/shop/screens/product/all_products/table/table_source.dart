@@ -53,7 +53,7 @@ class ProductsRows extends DataTableSource {
                 borderRadius: TSizes.borderRadiusMd,
                 backgroundColor: TColors.primaryBackground,
                 imageType: product.brand != null ? ImageType.network : ImageType.asset,
-                image: product.brand != null ? product.brand!.name : TImages.defaultImage,
+                image: product.brand != null ? product.brand!.image : TImages.defaultImage,
               ),
               const SizedBox(width: TSizes.spaceBtwItems),
               Flexible(

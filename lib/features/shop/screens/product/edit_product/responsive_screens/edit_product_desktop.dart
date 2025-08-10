@@ -44,7 +44,7 @@ class EditProductDesktopScreen extends StatelessWidget {
                 heading: 'Edit Product',
                 returnToPreviousScreen: true,
                 breadcrumbItems: [TRoutes.products, 'Edit Product'],
-              ), // TBreadcrumbsWithHeading
+              ),
               const SizedBox(height: TSizes.spaceBtwSections),
 
               // Edit Product

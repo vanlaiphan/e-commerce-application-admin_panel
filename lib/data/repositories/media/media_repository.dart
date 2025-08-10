@@ -6,7 +6,7 @@ import 'package:flutter/services.dart';
 import 'package:get/get.dart';
 import 'package:yt_ecommerce_admin_panel/utils/constants/enums.dart';
 
-import '../../../features/shop/models/image_model.dart';
+import '../../../features/media/models/image_model.dart';
 
 class MediaRepository extends GetxController {
   static MediaRepository get instance => Get.find();

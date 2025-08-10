@@ -8,7 +8,7 @@ import '../../../../utils/helpers/network_manager.dart';
 import '../../../../utils/popups/full_screen_loader.dart';
 import '../../../../utils/popups/loaders.dart';
 import '../../../media/controllers/media_controller.dart';
-import '../../models/image_model.dart';
+import '../../../media/models/image_model.dart';
 import 'banner_controller.dart';
 
 class CreateBannerController extends GetxController {

@@ -12,7 +12,7 @@ import 'package:yt_ecommerce_admin_panel/utils/constants/image_strings.dart';
 import 'package:yt_ecommerce_admin_panel/utils/constants/sizes.dart';
 import 'package:yt_ecommerce_admin_panel/utils/device/device_utility.dart';
 
-import '../../../../shop/models/image_model.dart';
+import '../../../models/image_model.dart';
 
 class MediaUploader extends StatelessWidget {
   const MediaUploader({super.key});

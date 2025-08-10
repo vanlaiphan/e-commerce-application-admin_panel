@@ -22,6 +22,8 @@ class EditBrandForm extends StatelessWidget {
   Widget build(BuildContext context) {
     final controller = Get.put(EditBrandController());
     controller.init(brand);
+    Get.put(CategoryController());
+
     return TRoundedContainer(
       width: 500,
       padding: const EdgeInsets.all(TSizes.defaultSpace),

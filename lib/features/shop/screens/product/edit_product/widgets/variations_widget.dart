@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:get/get.dart';
-import 'package:yt_ecommerce_admin_panel/features/shop/controllers/product/create_product_controller.dart';
 import 'package:yt_ecommerce_admin_panel/features/shop/controllers/product/product_images_controller.dart';
 import 'package:yt_ecommerce_admin_panel/features/shop/controllers/product/product_variations_controller.dart';
 import 'package:yt_ecommerce_admin_panel/features/shop/models/product_variation_model.dart';
@@ -13,6 +12,7 @@ import '../../../../../../utils/constants/colors.dart';
 import '../../../../../../utils/constants/enums.dart';
 import '../../../../../../utils/constants/image_strings.dart';
 import '../../../../../../utils/constants/sizes.dart';
+import '../../../../controllers/product/edit_product_controller.dart';
 
 class ProductVariations extends StatelessWidget {
   const ProductVariations({
@@ -24,7 +24,7 @@ class ProductVariations extends StatelessWidget {
     final variationController = ProductVariationController.instance;
 
     return Obx(
-      () => CreateProductController.instance.productType.value == ProductType.variable
+      () => EditProductController.instance.productType.value == ProductType.variable
           ? TRoundedContainer(
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,

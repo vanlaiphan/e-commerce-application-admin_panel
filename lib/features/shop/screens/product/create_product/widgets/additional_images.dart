@@ -1,4 +1,3 @@
-import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:iconsax/iconsax.dart';
@@ -25,7 +24,7 @@ class ProductAdditionalImages extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Obx(
-          () => SizedBox(
+      () => SizedBox(
         height: 300,
         child: Column(
           children: [
@@ -54,18 +53,7 @@ class ProductAdditionalImages extends StatelessWidget {
                 children: [
                   Expanded(
                     flex: 2,
-                    child: SizedBox(
-                      height: 80,
-                      child: ScrollConfiguration(
-                        behavior: const ScrollBehavior().copyWith(
-                          dragDevices: {
-                            PointerDeviceKind.touch,
-                            PointerDeviceKind.mouse,
-                          },
-                        ),
-                        child: _uploadedImagesOrEmptyList(),
-                      ),
-                    ),
+                    child: SizedBox(height: 80, child: _uploadedImagesOrEmptyList()),
                   ),
 
                   const SizedBox(width: TSizes.spaceBtwItems / 2),
@@ -99,15 +87,10 @@ class ProductAdditionalImages extends StatelessWidget {
   // Widget to Display Empty List Placeholder
   Widget emptyList() {
     return ListView.separated(
-      scrollDirection: Axis.horizontal,
-      physics: const ScrollPhysics(),
       itemCount: 6,
+      scrollDirection: Axis.horizontal,
       separatorBuilder: (context, index) => const SizedBox(width: TSizes.spaceBtwItems / 2),
-      itemBuilder: (context, index) => const TRoundedContainer(
-        backgroundColor: TColors.primaryBackground,
-        width: 80,
-        height: 80,
-      ),
+      itemBuilder: (context, index) => const TRoundedContainer(backgroundColor: TColors.primaryBackground, width: 80, height: 80),
     );
   }
 
@@ -115,7 +98,6 @@ class ProductAdditionalImages extends StatelessWidget {
   Widget _uploadedImages() {
     return ListView.separated(
       scrollDirection: Axis.horizontal,
-      physics: const ScrollPhysics(),
       itemCount: additionalProductImagesURLs.length,
       separatorBuilder: (context, index) => const SizedBox(width: TSizes.spaceBtwItems / 2),
       itemBuilder: (context, index) {

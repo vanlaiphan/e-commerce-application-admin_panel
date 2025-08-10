@@ -9,7 +9,7 @@ import '../../../media/controllers/media_controller.dart';
 import '../../models/brand_category_model.dart';
 import '../../models/brand_model.dart';
 import '../../models/category_model.dart';
-import '../../models/image_model.dart';
+import '../../../media/models/image_model.dart';
 import 'brand_controller.dart';
 
 class CreateBrandController extends GetxController {

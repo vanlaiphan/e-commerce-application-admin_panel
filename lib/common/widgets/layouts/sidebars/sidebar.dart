@@ -11,6 +11,8 @@ import 'package:yt_ecommerce_admin_panel/utils/constants/sizes.dart';
 import '../../../../routes/routes.dart';
 import 'menu/menu_item.dart';
 
+
+
 class TSidebar extends StatelessWidget {
   const TSidebar({super.key});
 
@@ -27,31 +29,35 @@ class TSidebar extends StatelessWidget {
           child: Column(
             children: [
               // Image
-              Row(
-                children: [
-                  Obx(
-                    () => TCircularImage(
-                      width: 60,
-                      height: 60,
-                      padding: 0,
-                      // margin :TSizes.sm,
-                      backgroundColor: Colors.transparent,
-                      imageType: SettingsController.instance.settings.value.appLogo.isNotEmpty ? ImageType.network : ImageType.asset,
-                      image: SettingsController.instance.settings.value.appLogo.isNotEmpty
-                          ? SettingsController.instance.settings.value.appLogo
-                          : TImages.darkAppLogo,
-                    ),
-                  ),
-                  Expanded(
-                    child: Obx(
-                      () => Text(
-                        SettingsController.instance.settings.value.appName,
-                        style: Theme.of(context).textTheme.headlineLarge,
-                        overflow: TextOverflow.ellipsis,
+              Padding(
+                padding: const EdgeInsets.symmetric(vertical: TSizes.md),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Obx(
+                      () => TCircularImage(
+                        width: 60,
+                        height: 60,
+                        padding: 0,
+                        backgroundColor: Colors.transparent,
+                        imageType: SettingsController.instance.settings.value.appLogo.isNotEmpty ? ImageType.network : ImageType.asset,
+                        image: SettingsController.instance.settings.value.appLogo.isNotEmpty
+                            ? SettingsController.instance.settings.value.appLogo
+                            : TImages.darkAppLogo,
                       ),
                     ),
-                  ),
-                ],
+                    const SizedBox(width: TSizes.sm),
+                    Flexible(
+                      child: Obx(
+                        () => Text(
+                          SettingsController.instance.settings.value.appName,
+                          style: Theme.of(context).textTheme.headlineLarge,
+                          overflow: TextOverflow.ellipsis,
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
               ),
               const SizedBox(height: TSizes.spaceBtwSections),
               Padding(
@@ -71,11 +77,9 @@ class TSidebar extends StatelessWidget {
                     const TMenuItem(route: TRoutes.products, icon: Iconsax.shopping_bag, itemName: 'Products'),
                     const TMenuItem(route: TRoutes.customers, icon: Iconsax.profile_2user, itemName: 'Customers'),
                     const TMenuItem(route: TRoutes.orders, icon: Iconsax.box, itemName: 'Orders'),
-                    // Other Menu Items
-                    Text('OTHER', style: Theme.of(context).textTheme.bodySmall!.apply(letterSpacingDelta: 1.2)),
                     const TMenuItem(route: TRoutes.profile, icon: Iconsax.user, itemName: 'Profile'),
                     const TMenuItem(route: TRoutes.settings, icon: Iconsax.setting_2, itemName: 'Settings'),
-                    const TMenuItem(route: 'logout', icon: Iconsax.logout, itemName: 'Logout'),
+                    const TMenuItem(route: '/logout', icon: Iconsax.logout, itemName: 'Logout'),
                   ],
                 ),
               )

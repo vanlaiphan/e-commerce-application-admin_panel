@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:iconsax/iconsax.dart';
-import 'package:yt_ecommerce_admin_panel/features/shop/controllers/product/create_product_controller.dart';
 import 'package:yt_ecommerce_admin_panel/features/shop/controllers/product/edit_product_controller.dart';
 
 import '../../../../../../common/widgets/containers/rounded_container.dart';

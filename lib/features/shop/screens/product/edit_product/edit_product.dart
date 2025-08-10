@@ -13,7 +13,10 @@ class EditProductScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     final controller = Get.put(EditProductController());
     final product = Get.arguments;
-    controller.initProductData(product);
+    // controller.initProductData(product);
+    WidgetsBinding.instance.addPostFrameCallback((_) {
+      controller.initProductData(product);
+    });
 
     return TSiteTemplate(desktop: EditProductDesktopScreen(product: product), mobile: EditProductMobileScreen(product: product));
   }

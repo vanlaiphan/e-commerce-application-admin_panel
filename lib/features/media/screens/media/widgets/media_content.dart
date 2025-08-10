@@ -5,7 +5,7 @@ import 'package:yt_ecommerce_admin_panel/common/widgets/containers/rounded_conta
 import 'package:yt_ecommerce_admin_panel/common/widgets/loaders/loader_animation.dart';
 import 'package:yt_ecommerce_admin_panel/features/media/controllers/media_controller.dart';
 import 'package:yt_ecommerce_admin_panel/features/media/screens/media/widgets/view_image_details.dart';
-import 'package:yt_ecommerce_admin_panel/features/shop/models/image_model.dart';
+import 'package:yt_ecommerce_admin_panel/features/media/models/image_model.dart';
 import 'package:yt_ecommerce_admin_panel/utils/constants/sizes.dart';
 
 import '../../../../../common/widgets/images/t_rounded_image.dart';

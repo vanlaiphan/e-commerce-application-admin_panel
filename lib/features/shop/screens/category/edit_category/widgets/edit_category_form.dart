@@ -22,6 +22,7 @@ class EditCategoryForm extends StatelessWidget {
     final editController = Get.put(EditCategoryController());
     editController.init(category);
     final categoryController = Get.put(CategoryController());
+
     return TRoundedContainer(
       width: 500,
       padding: const EdgeInsets.all(TSizes.defaultSpace),

@@ -101,7 +101,7 @@ class LoginController extends GetxController {
           id: AuthenticationRepository.instance.authUser!.uid,
           firstName: 'Cwt',
           lastName: 'Admin',
-          email: TTexts.adminEmail,
+          email: TTexts. adminEmail,
           role: AppRole.admin,
           createdAt: DateTime.now(),
         ),

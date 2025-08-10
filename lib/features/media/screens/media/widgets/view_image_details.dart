@@ -11,7 +11,7 @@ import '../../../../../utils/constants/enums.dart';
 import '../../../../../utils/constants/sizes.dart';
 import '../../../../../utils/device/device_utility.dart';
 import '../../../../../utils/popups/loaders.dart';
-import '../../../../shop/models/image_model.dart';
+import '../../../models/image_model.dart';
 
 class ImagePopup extends StatelessWidget {
   // The image model to display detailed information about.
